@@ -1,0 +1,45 @@
+{
+    "version": "2.0.0",
+    // 这个文件就是可以准备很多动作的任务文件
+    // 所有任务都是独立一个动作，但是他们可以互相依赖
+    // 就好像函数一样
+    "tasks": [
+        {
+            // 编译任务 。外面只关心这个就行了
+            "label": "build_program",
+            "type": "shell",
+            "dependsOrder": "sequence", //对依赖任务列表，挨个执行（不要并行）
+            "dependsOn": ["inc_build_action","check_build_result"],//构建并检查结果
+            "group": {
+                "kind": "build", //定义任务类别 
+                "isDefault": true //这个是这种任务的默认的任务，没实际指定就默认是它
+            }
+        },
+
+        // 下面这些任务都是子过程，对外面隐藏的
+        // 检查编译结果
+        {
+            "label": "check_build_result",
+            "type": "shell",
+            "command": "sh",
+            "args": [
+                "-c",
+                "./.vscode/check_mod_time.sh './sys_env/${config:build_type}/bin/${config:program_name}'"
+            ],
+            "group": "build"
+        },
+        // 增量编译动作
+        {
+            "label": "inc_build_action",
+            "type": "shell",
+            "command": "sh -c './my_incremental_build.sh'",
+            "group": "build"
+        },
+        // 启动基于vs环境的msys2
+        {
+            "label": "lanuch msys2 vs env",
+            "type": "process",
+            "command": "./.vscode/my_vs_env.cmd",
+        }
+    ]
+}

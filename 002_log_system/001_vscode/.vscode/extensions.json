@@ -1,0 +1,96 @@
+// ====================================================
+// 项目扩展推荐列表
+// 
+// 【 当前行为 】
+// 该文件不会自动弹出安装提醒，需要您自己决定何时安装。
+//
+// 【 如何手动安装 (可逐个选择) 】
+// 1. 打开扩展视图（Ctrl+Shift+X 或点击左侧扩展图标）
+// 2. 在扩展面板左侧找到 "工作区建议" 分类
+//    或在搜索框输入 @recommended 直接筛选
+// 3. 每个扩展右侧都有一个 "安装按钮"， 点击即可安装
+//    不会一次性全部安装，完全可以按需挑选
+//
+// 【如何恢复自动弹窗提醒】
+// 如果您希望 VS Code 再次主动提示安装这些扩展，
+// 请删除或注释掉 .vscode/settings.json 中的：
+//   
+// 然后按 Ctrl+Shift+P → 运行 "Developer: Reload Window" 即可看到弹窗。
+// ====================================================
+{
+  // ---------- 推荐安装的扩展 ----------
+  // 格式："发布者.扩展名"（即扩展 ID）
+  // 获取方式：在已安装的扩展上右键 → 复制扩展 ID
+  "recommendations": [
+    //根据项目需要继续添加，例如：
+
+    "aaron-bond.better-comments",
+    "akmarnafi.comment-headers",
+    "blackblackcat.silver-gray",
+    "bmw-cdc-team.asm-enable-debug",
+    "calcoph.vscode-hexpat",
+    "cismonx.texinfo",
+    "david-moskovitz.winter-is-coming-one-dark-pro",
+    "eamodio.gitlens",
+    "eclipse-cdt.memory-inspector",
+    "editorconfig.editorconfig",
+    "emilast.logfilehighlighter",
+    "emmanuelbeziat.vscode-great-icons",
+    "file-icons.file-icons",
+    "foxundermoon.shell-format",
+    "iliazeus.vscode-ansi",
+    "intellsmi.comment-translate",
+    "jack89ita.copy-filename",
+    "johnpapa.vscode-peacock",
+    "johnpapa.winteriscoming",
+    "josetr.cmake-language-support-vscode",
+    "kiui.mesh-viewer",
+    "kylinideteam.cmake-intellisence",
+    "l13rary.l13-diff",
+    "llong.vscode-bookmark-plugin",
+    "lucianirsigler.nasm",
+    "lunarwtr.tga-image-preview",
+    "mads-hartmann.bash-ide-vscode",
+    "mcu-debug.debug-tracker-vscode",
+    "mhutchie.git-graph",
+    "mightbesimon.emoji-icons",
+    "ms-azuretools.vscode-containers",
+    "ms-ceintl.vscode-language-pack-zh-hans",
+    "ms-dotnettools.vscode-dotnet-runtime",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode-remote.remote-ssh-edit",
+    "ms-vscode.cmake-tools",
+    "ms-vscode.cpp-devtools",
+    "ms-vscode.cpptools",
+    "ms-vscode.cpptools-extension-pack",
+    "ms-vscode.cpptools-themes",
+    "ms-vscode.hexeditor",
+    "ms-vscode.remote-explorer",
+    "mtsmfm.vscode-stl-viewer",
+    "naumovs.color-highlight",
+    "necraidan.winterisgone",
+    "pixl-garden.bongocat",
+    "reznikdi.windbg-debug",
+    "rogalmic.bash-debug",
+    "rsbondi.highlight-words",
+    "rubenverg.bootstrap-product-icons",
+    "ryu1kn.partial-diff",
+    "sdras.night-owl",
+    "sebastienma.ansi-color-code",
+    "slevesque.shader",
+    "slevesque.vscode-3dviewer",
+    "taiyuuki.chinese-color",
+    "tal7aouy.icons",
+    "taniarascia.new-moon-vscode",
+    "teabyii.ayu",
+    "theqtcompany.qt",
+    "theqtcompany.qt-core",
+    "theqtcompany.qt-qml",
+    "theqtcompany.qt-ui",
+    "tintinweb.graphviz-interactive-preview",
+    "tomoki1207.selectline-statusbar",
+    "twxs.cmake",
+    "willasm.rc-script",
+   
+  ]
+}

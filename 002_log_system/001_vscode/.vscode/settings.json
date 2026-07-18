@@ -1,0 +1,48 @@
+{
+    // git_bash 设置成默认
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+
+    
+    // vs code 自定义代码字体颜色，局部变量、全局变量、函数、宏、属性
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true, // enable for all themes
+        "rules": {
+            //全局变量
+            "variable.global": { 
+                "fontStyle": "underline",
+            },
+        }
+    },
+
+    // 把cpp插件的符号数据库，保存在当前的工作区了
+    // 防止丢在系统上，容易和别人混淆
+    "C_Cpp.default.browse.databaseFilename": "${workspaceFolder}/.vscode/cpp_database/vc.db",
+    
+    // commentTranslate 配置
+    "commentTranslate.hover.enabled": false,
+    "commentTranslate.targetLanguage": "zh-CN",
+    "commentTranslate.source": "Bing",
+    // gitlens 配置
+    "gitlens.codeLens.enabled": false,//屏蔽gitlens碍眼的行上提示
+    "gitlens.advanced.externalDiffTool": "bc",
+    "gitlens.advanced.externalDirectoryDiffTool": "bc",
+
+
+    // 自己 launch.json 中需要使用的变量
+    // 我们可以在这个settings.json里定义自己的变量
+    // 后面可以通过 ${config:变量名} 取用
+    // 就像 ${workspaceFolder}这种内置的一样
+    "build_type" : "release",//构建类型
+    "program_name": "app.exe",
+
+
+
+    // 让cmake插件 别吵~
+    "cmake.configureOnOpen": false,
+    "cmake.configureOnEdit": false,
+    "cmake.showSystemKits": false,
+
+    // 忽略 插件建议 提醒
+    "extensions.ignoreRecommendations": true,
+}

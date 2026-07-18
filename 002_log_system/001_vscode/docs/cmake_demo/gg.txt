@@ -1,0 +1,6 @@
+
+
+execute_process(
+    COMMAND bash -c "echo 你好，gg..."
+    ENCODING  UTF-8
+)

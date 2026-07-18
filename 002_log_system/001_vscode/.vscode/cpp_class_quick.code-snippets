@@ -1,0 +1,58 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+    
+    // 这个字典里的键名可以自己写的,比如这里我写“cpp class template”
+	"cpp class template": {
+			"prefix": "classcpp",
+			"body": [
+                "class ${TM_FILENAME_BASE:/capitalize}",
+                "{",
+                "public:",
+                "    ${TM_FILENAME_BASE:/capitalize}();",
+                "    ~${TM_FILENAME_BASE:/capitalize}();",
+                "private:",
+                "    // 删除防误用",
+                "    ${TM_FILENAME_BASE:/capitalize}(const ${TM_FILENAME_BASE:/capitalize}&) = delete;",
+                "    ${TM_FILENAME_BASE:/capitalize}(${TM_FILENAME_BASE:/capitalize}&&) = delete;",
+                "    ${TM_FILENAME_BASE:/capitalize}& operator=(const ${TM_FILENAME_BASE:/capitalize}&) = delete;",
+                "    ${TM_FILENAME_BASE:/capitalize}& operator=(${TM_FILENAME_BASE:/capitalize}&&) = delete;",
+                "",
+                "",
+                "private:",
+                "    /* data */",
+                "};"
+			],
+			"description": "创建一个类,类名与文件名相同"
+	},
+    "include filename": {
+			"prefix": "incf",//关键字就叫incf吧,寓意include 文件名
+			"body": [
+                "#include \"${TM_FILENAME_BASE:}.h\"",
+                // "#include \"${TM_FILENAME_BASE:/capitalize}.h\"",
+			],
+			"description": "在cpp文件中,敲下incf,就能引进其同名头文件"
+	},
+    "qt class header file template": {
+			"prefix": "qpp",//关键字就叫qpp吧,寓意弄个qt的类模版
+			"body": [
+                "#pragma once",
+                "#include <QWidget>",
+                "class ${TM_FILENAME_BASE:/capitalize} : public QWidget",
+                "{",
+                "    Q_OBJECT",
+                "",
+                "public:",
+                "    ${TM_FILENAME_BASE:/capitalize}(QWidget *parent = nullptr);",
+                "    ~${TM_FILENAME_BASE:/capitalize}(){};",
+                "",
+                "private:",
+                "    /* data */",
+                "};"
+			],
+			"description": "在cpp文件中,敲下classqpp,就引入创建一个类,类名与文件名相同"
+	}
+	
+}
